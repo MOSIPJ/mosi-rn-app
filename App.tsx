@@ -24,6 +24,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import { useFirebaseMessaging } from './src/shared/hooks/useFirebaseMessaging';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -57,7 +58,7 @@ function Section({children, title}: SectionProps): React.JSX.Element {
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
-
+  const { fcmToken } = useFirebaseMessaging();
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };

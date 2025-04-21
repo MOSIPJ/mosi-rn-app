@@ -1,4 +1,4 @@
-package com.mosi_rn_app
+package com.mosi.app
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

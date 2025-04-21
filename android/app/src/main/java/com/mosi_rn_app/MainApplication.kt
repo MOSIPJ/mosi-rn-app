@@ -1,4 +1,4 @@
-package com.mosi_rn_app
+package com.mosi.app
 
 import android.app.Application
 import com.facebook.react.PackageList

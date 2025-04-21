@@ -23,6 +23,10 @@ target 'mosi_rn_app' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  # Firebase 관련 Pods에 modular_headers 설정 추가
+  pod 'GoogleUtilities', :modular_headers => true
+  pod 'FirebaseCoreInternal', :modular_headers => true
+
   target 'mosi_rn_appTests' do
     inherit! :complete
     # Pods for testing

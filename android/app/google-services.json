@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "460870929351",
+    "project_id": "mosi-bd084",
+    "storage_bucket": "mosi-bd084.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460870929351:android:6d44b951fa6ad336e227e2",
+        "android_client_info": {
+          "package_name": "com.mosi.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAu3WNeT8P3qXdmFfrTribGHBejrJ3gNL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
