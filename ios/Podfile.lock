@@ -1588,6 +1588,7 @@ DEPENDENCIES:
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
+  - FirebaseCore
   - FirebaseCoreInternal
   - fmt (from `../node_modules/react-native/third-party-podspecs/fmt.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
@@ -1876,6 +1877,6 @@ SPEC CHECKSUMS:
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
   Yoga: 055f92ad73f8c8600a93f0e25ac0b2344c3b07e6
 
-PODFILE CHECKSUM: 99505090cb8141d91ac2f4241cbf0158056da275
+PODFILE CHECKSUM: e520c73d7f9db14ca8e4f07942d0f301628e1793
 
 COCOAPODS: 1.16.2

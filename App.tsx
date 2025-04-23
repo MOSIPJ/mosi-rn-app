@@ -5,9 +5,10 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  Platform,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -24,7 +25,9 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import { useFirebaseMessaging } from './src/shared/hooks/useFirebaseMessaging';
+import {useFirebaseMessaging} from './src/shared/hooks/useFirebaseMessaging';
+import {PermissionsAndroid} from 'react-native';
+import {useNotificationPermission} from './src/shared/hooks/useNotificationPermission';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -58,7 +61,19 @@ function Section({children, title}: SectionProps): React.JSX.Element {
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
-  const { fcmToken } = useFirebaseMessaging();
+  const {fcmToken} = useFirebaseMessaging();
+  const {requestPermission} = useNotificationPermission();
+
+  useEffect(() => {
+    if (Platform.OS === 'ios') {
+      requestPermission();
+    } else {
+      PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS,
+      );
+    }
+  }, []);
+
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };

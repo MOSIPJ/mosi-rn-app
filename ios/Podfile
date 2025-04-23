@@ -24,6 +24,7 @@ target 'mosi_rn_app' do
   )
 
   # Firebase 관련 Pods에 modular_headers 설정 추가
+  pod 'FirebaseCore', :modular_headers => true
   pod 'GoogleUtilities', :modular_headers => true
   pod 'FirebaseCoreInternal', :modular_headers => true
 
